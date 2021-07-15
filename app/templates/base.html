@@ -1,5 +1,7 @@
+{#导入bootstrap基础样式表#}
 {% extends "bootstrap/base.html" %}
 
+{#定义title标签页#}
 {% block title %}Flasky{% endblock %}
 
 {#定义收藏夹图标#}
@@ -9,6 +11,7 @@
     <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 {% endblock %}
 
+{#定义导航栏#}
 {% block navbar %}
     <div class="navbar navbar-inverse" role="navigation">
         <div class="container">
@@ -30,8 +33,22 @@
     </div>
 {% endblock %}
 
+{#定义内容区#}
 {% block content %}
     <div class="container">
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+        {% endfor %}
+        {#定义页面内容#}
         {% block page_content %}{% endblock %}
     </div>
+{% endblock %}
+
+{#引入Moment.js库#}
+{% block scripts %}
+{{ super() }}
+{{ moment.include_moment() }}
 {% endblock %}
