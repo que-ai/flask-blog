@@ -5,7 +5,7 @@
 
 class Config:
     SECRET_KEY = 'MyHardPassword'
-    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:123456@127.0.0.1/flasky"
+    SQLALCHEMY_DATABASE_URI = "mysql+pymysql://root:root@127.0.0.1/flasky"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = 'smtp.exmail.qq.com'
     MAIL_PORT = 465
