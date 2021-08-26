@@ -10,8 +10,8 @@ class Config:
     MAIL_SERVER = 'smtp.exmail.qq.com'
     MAIL_PORT = 465
     MAIL_USE_SSL = True
-    MAIL_USERNAME = 'it@cfiihz.com'
-    MAIL_PASSWORD = 'Yyf145188'
+    MAIL_USERNAME = '888888@cfiihz.com'
+    MAIL_PASSWORD = '888888'
     FLASKY_MAIL_SUBJECT_PREFIX = '[flasky]'
     FLASKY_MAIL_SENDER = 'Flasky Admin <it@cfiihz.com>'
     FLASKY_ADMIN = 'yaoyuanfu@cfiihz.com'
